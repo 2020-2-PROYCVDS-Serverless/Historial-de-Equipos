@@ -1,5 +1,10 @@
-drop table Laboratorio;
-drop table Registro;
-drop table Equipo;
 drop table ElementoEquipo;
+drop table Prestamo;
 drop table Novedad;
+drop table Equipo;
+drop table Registro;
+drop table EncargadoLaboratorio;
+drop table Laboratorio;
+drop table Administrador;
+drop table Credencial;
+drop table Usuario;
