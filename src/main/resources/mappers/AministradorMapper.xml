@@ -8,4 +8,10 @@
 <resultMap id="AdministradorResult" type="">
 </resultMap>
 
+
+<insert id="registarAdmin" parameterType="map" statementType="CALLABLE">
+	{call registrarAdmin(#{adminID}, #{nombre}, #{mail}, #{username}, #{pass})}
+</insert>
+
+
 </mapper>

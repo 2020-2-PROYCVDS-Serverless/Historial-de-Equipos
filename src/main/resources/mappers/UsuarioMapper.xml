@@ -8,4 +8,9 @@
 <resultMap id="UsuarioResult" type="">
 </resultMap>
 
+<insert id="registrarUsuario" parameterType="map">
+	{call registrarUsuario(#{ID}, #{nombre}, #{mail}, #{username}, #{pass})}
+</insert>
+
+
 </mapper>

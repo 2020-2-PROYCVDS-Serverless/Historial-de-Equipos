@@ -8,4 +8,8 @@
 <resultMap id="NovedadResult" type="">
 </resultMap>
 
+<insert id="registarNovedad" parameterType="map">
+	{call registrarNovedad()}
+</insert>
+
 </mapper>

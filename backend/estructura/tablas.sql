@@ -51,7 +51,7 @@ create table ElementoEquipo (
 create table Prestamo (
 	fechaInicio timestamp,
 	fechaFin timestamp,
-	usuarioID varchar not null references Usuario(carnet),
+	usuarioID varchar not null references Usuario(carnet) on delete cascade,
 	labID varchar(10) primary key references Laboratorio(id)
 );
 
