@@ -9,7 +9,7 @@
 </resultMap>
 
 <insert id="registarNovedad" parameterType="map">
-	{call registrarNovedad()}
+	{call registrarNovedad(#fechaCreacion, #{computadorID}, #{detalle})}
 </insert>
 
 </mapper>

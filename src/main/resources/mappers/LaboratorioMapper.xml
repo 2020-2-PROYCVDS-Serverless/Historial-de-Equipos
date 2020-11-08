@@ -8,4 +8,9 @@
 <resultMap id="LaboratorioResult" type="">
 </resultMap>
 
+
+<insert id="crearLaboratorio" parameterType="map">
+	{call crearLaboratorio(#{labID}, #{fechaCreacion})}
+</insert>
+
 </mapper>

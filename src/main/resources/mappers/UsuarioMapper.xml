@@ -12,5 +12,8 @@
 	{call registrarUsuario(#{ID}, #{nombre}, #{mail}, #{username}, #{pass})}
 </insert>
 
+<insert id="iniciarSesion" parameterType="map">
+	{call iniciarSesion(#{usuarioID}, #{passwd})}
+</insert>
 
 </mapper>

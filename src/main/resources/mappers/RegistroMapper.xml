@@ -8,4 +8,9 @@
 <resultMap id="RegistroResult" type="">
 </resultMap>
 
+
+<insert id="crearRegistro" parameterType="map">
+	{call crearRegistro(#{regisID}, #{fechaCreacion}, #{detalle}, #{cantidadSolicitada}, #{labID}, #{adminID})}
+</insert>
+
 </mapper>

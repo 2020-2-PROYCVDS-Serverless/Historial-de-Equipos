@@ -8,4 +8,9 @@
 <resultMap id="EquipoResult" type="">
 </resultMap>
 
+
+<insert id="registrarEquipo" parameterType="map">
+	{call registarEquipo(#{nombreEquipo}, #{labID}, #{regisID})}
+</insert>
+
 </mapper>
