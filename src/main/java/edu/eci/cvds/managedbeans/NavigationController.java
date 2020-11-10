@@ -1,8 +1,8 @@
-package edu.eci.cvds.persistence;
+package edu.eci.cvds.managedbeans;
 
-import java.util.List;
-import java.util.Date;
-import edu.eci.cvds.samples.actor.Usuario;
+import java.io.Serializable;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.RequestScoped;
 /**
 *		------------------------------------------------------------------------
 *		------------------------ PROYECTO CVDS ------------------------------------------
@@ -18,8 +18,11 @@ import edu.eci.cvds.samples.actor.Usuario;
 * @version 1.1 
 *
 */
-public interface UsuarioDAO {
+@ManagedBean(name = "navigationController", eager = true)
+@RequestScoped
 
-   public void save(Usuario e) throws PersistenceException ;
-
+public class NavigationController implements Serializable {
+   public String moveToPageAlquiler() {
+      return "registroalquiler";
+   }
 }

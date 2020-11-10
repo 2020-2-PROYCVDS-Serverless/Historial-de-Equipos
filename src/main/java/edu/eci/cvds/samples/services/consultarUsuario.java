@@ -1,8 +1,4 @@
-package edu.eci.cvds.persistence;
-
-import java.util.List;
-import java.util.Date;
-import edu.eci.cvds.samples.actor.Usuario;
+consultarUsuario
 /**
 *		------------------------------------------------------------------------
 *		------------------------ PROYECTO CVDS ------------------------------------------
@@ -18,8 +14,3 @@ import edu.eci.cvds.samples.actor.Usuario;
 * @version 1.1 
 *
 */
-public interface UsuarioDAO {
-
-   public void save(Usuario e) throws PersistenceException ;
-
-}
