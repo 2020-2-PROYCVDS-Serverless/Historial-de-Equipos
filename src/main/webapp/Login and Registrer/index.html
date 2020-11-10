@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+	<div id="login-button">
+		<img src="https://cdn2.iconfinder.com/data/icons/round-interface-1/221/19-512.png">
+		</img>
+	</div>
+	
+	<div class="contenedor-form">
+		<div class="toggle">
+			<span>Registrarse</span>
+		</div>
+		
+		
+		<div class="formulario">
+			<h1>Log In</h1>
+			<form>
+				<input type="email" name="Correo" placeholder="Correo" required>
+				<input type="password" name="Contraseña" placeholder="Contraseña"required>
+				<a href="#">Log in</a>
+				<div id="remember-container">
+					<input type="checkbox" id="checkbox-2-1" class="checkbox" checked="checked"/>
+					<span id="remember">Recordarme</span>
+					<span id="forgotten">¿Olvidaste la contraseña?</span>
+				</div>
+			</form>
+		</div>
+		
+		<div class="formulario">
+			<h1>Registrarse</h1>
+			<form>
+				<input type="text" name="Nombre y Apellido" placeholder="Nombre y Apellido" required>
+				<input type="email" name="Correo" placeholder="Correo" required>
+				<input type="password" name="Contraseña" placeholder="Contraseña" required>
+				<input type="number" name="Carnet" placeholder="Carnet" required>
+				<select name="Seleciona un Rol" placeholder="Seleciona un Rol" required>
+					<option value="1">Monitor</option>
+					<option value="2">Profesor</option>
+					<option value="3">Estudiante</option>
+				</select>
+				<a href="#">Registrarse</a>
+			</form>
+		</div>
+		
+	</div>
+
+	<!-- Forgotten Password Container -->
+	<div id="forgotten-container">
+		<h1>Forgotten</h1>
+		<span class="close-btn">
+			<img src="https://cdn4.iconfinder.com/data/icons/miu/22/circle_close_delete_-128.png"></img>
+		</span>
+
+		<form>
+			<input type="email" name="email" placeholder="E-mail">
+			<a href="#" class="orange-btn">Get new password</a>
+		</form>
+	</div>
+    <script src="js/jquery-3.1.1.min.js"></script>    
+    <script src="js/main.js"></script>
+</body>
+
+</html>
