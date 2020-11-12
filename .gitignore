@@ -36,3 +36,7 @@ nb-configuration.xml
 
 # MAC_OS #
 .DS_Store
+
+
+# Astah #
+*.lock
