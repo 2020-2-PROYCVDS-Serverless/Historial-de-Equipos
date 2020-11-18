@@ -1,4 +1,4 @@
-create or replace procedure registarUsuario(ID varchar, nombres varchar, mail varchar, nombreUsuario varchar, passwd varchar)
+create or replace procedure registrarUsuario(ID varchar, nombres varchar, mail varchar, nombreUsuario varchar, passwd varchar)
 language plpgsql
 as $body$
 begin
@@ -16,7 +16,7 @@ begin
 	select count(c.username) into verification from credencial c
 		where c.username = nombreUsuario and c.pass = passwd;
 	if verification = 0 then
-		raise;
+		raise exception 'User or password incorrect';
 	end if;
 end; $body$
 
@@ -54,11 +54,11 @@ begin
 end; $body$
 
 
-create or replace procedure crearRegistro (regisID varchar(5), creacion timestamp, detail text, cantidad int, labID varchar(10), administrator varchar)
+create or replace procedure crearRegistro (regisID varchar(5), creacion timestamp, detail text, labID varchar(10), administrator varchar)
 language plpgsql
 as $body$
 begin 
-	insert into registro (id , fecharegistro , detalles , cantidadsolicitada , laboratorioid , adminid ) values (regisID, creacion, detail, cantidad, labID, administrator);
+	insert into registro (id , fecharegistro , detalles , laboratorioid , adminid ) values (regisID, creacion, detail, labID, administrator);
 end; $body$
 
 

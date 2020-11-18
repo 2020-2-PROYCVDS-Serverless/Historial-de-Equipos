@@ -29,7 +29,6 @@ create table Registro (
 	id varchar(5) primary key,
 	fechaRegistro timestamp not null,
 	detalles text,
-	cantidadSolicitada int not null,
 	laboratorioID varchar(10) not null references Laboratorio(id) on delete cascade,
 	adminID varchar references Administrador(usuarioID)
 );

@@ -5,9 +5,9 @@ import java.util.List;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.inject.Inject;
-import edu.eci.cvds.samples.entities.Equipo;
-import edu.eci.cvds.services.ServicesException;
-import edu.eci.cvds.samples.services.registrarEquipo;
+//import edu.eci.cvds.samples.entities.Equipo;
+//import edu.eci.cvds.services.ServicesException;
+//import edu.eci.cvds.samples.services.registrarEquipo;
 
 
 
@@ -15,7 +15,7 @@ import edu.eci.cvds.samples.services.registrarEquipo;
 @SessionScoped 
 public class EquipoBean extends BasePageBean  {
 
-	@Inject
+/*	@Inject
     private registrarEquipo equipoS;
 	
     private Equipo equipo;
@@ -40,6 +40,6 @@ public class EquipoBean extends BasePageBean  {
             equipoS.registrar(equipo);
        
     }
-	
+	*/
 
 }

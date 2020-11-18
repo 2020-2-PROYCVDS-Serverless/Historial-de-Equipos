@@ -1,9 +1,9 @@
 package edu.eci.cvds.managedbeans;
-import org.apache.shiro.SecurityUtils;
-import org.apache.shiro.subject.Subject;
-import org.apache.shiro.authc.UsernamePasswordToken;
-import org.apache.shiro.authc.AuthenticationException;
-import org.apache.shiro.mgt.SecurityManager;
+//import org.apache.shiro.SecurityUtils;
+//import org.apache.shiro.subject.Subject;
+//import org.apache.shiro.authc.UsernamePasswordToken;
+//import org.apache.shiro.authc.AuthenticationException;
+//import org.apache.shiro.mgt.SecurityManager;
 import javax.faces.application.FacesMessage;
 import java.util.logging.Level;
 import javax.faces.bean.ManagedBean;
@@ -40,16 +40,16 @@ public class UsuarioBean extends BasePageBean implements Serializable {
     
     public void iniciarSesion(){
        
-        Subject usuarioactual = SecurityUtils.getSubject();              
-        UsernamePasswordToken token = new UsernamePasswordToken(usuario, clave);             
-        try{            
-            usuarioactual.login(token);    
-            FacesContext.getCurrentInstance().getExternalContext().redirect("Login and Registrer/index.xhtml");
-        }catch(AuthenticationException ax){
-           FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "Datos Incorrectos", ""));
-        } catch (IOException ex) {
-            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "Fallo", ""));
-        }
+//        Subject usuarioactual = SecurityUtils.getSubject();              
+//        UsernamePasswordToken token = new UsernamePasswordToken(usuario, clave);             
+//        try{            
+//            usuarioactual.login(token);    
+//            FacesContext.getCurrentInstance().getExternalContext().redirect("Login and Registrer/index.xhtml");
+//        }catch(AuthenticationException ax){
+//           FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "Datos Incorrectos", ""));
+//        } catch (IOException ex) {
+//            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "Fallo", ""));
+//        }
         
         
     }

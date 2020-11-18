@@ -5,9 +5,9 @@ import java.util.List;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.inject.Inject;
-import edu.eci.cvds.samples.entities.Novedad;
-import edu.eci.cvds.services.ServicesException;
-import edu.eci.cvds.samples.services.NovedadServices;
+//import edu.eci.cvds.samples.entities.Novedad;
+//import edu.eci.cvds.services.ServicesException;
+//import edu.eci.cvds.samples.services.NovedadServices;
 
 
 
@@ -15,7 +15,7 @@ import edu.eci.cvds.samples.services.NovedadServices;
 @SessionScoped 
 public class NovedadBean extends BasePageBean  {
 
-	@Inject
+/*	@Inject
     private NovedadServices novedadS;
 	
     private Novedad novedadEquipo;
@@ -56,5 +56,5 @@ public class NovedadBean extends BasePageBean  {
             novedadS.registrarNovedadElemento(novedadElemento);
        
     }
-
+*/
 }

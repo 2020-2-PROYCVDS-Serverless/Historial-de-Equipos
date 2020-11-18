@@ -4,9 +4,9 @@ import java.util.List;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.inject.Inject;
-import edu.eci.cvds.samples.entities.Elemento;
-import edu.eci.cvds.services.ServicesException;
-import edu.eci.cvds.samples.services.registrarElemento;
+//import edu.eci.cvds.samples.entities.Elemento;
+//import edu.eci.cvds.services.ServicesException;
+//import edu.eci.cvds.samples.services.registrarElemento;
 
 
 
@@ -14,7 +14,7 @@ import edu.eci.cvds.samples.services.registrarElemento;
 @SessionScoped 
 public class ElementoBean extends BasePageBean  {
 
-	@Inject
+	/*@Inject
     private registrarElemento elementoS;
 	
     private Elemento elemento;
@@ -34,7 +34,7 @@ public class ElementoBean extends BasePageBean  {
     public void registrarelemento() {
             elementoS.registrar(elemento);
        
-    }
+    }*/
 	
 
 }
