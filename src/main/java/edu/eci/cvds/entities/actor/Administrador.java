@@ -1,4 +1,9 @@
-registrarElemento
+package edu.eci.cvds.entities.actor;
+
+import java.io.Serializable;
+import java.util.Date;
+import java.util.ArrayList;
+
 /**
 *		------------------------------------------------------------------------
 *		------------------------ PROYECTO CVDS ------------------------------------------
@@ -14,3 +19,9 @@ registrarElemento
 * @version 1.1 
 *
 */
+public class Administrador extends Usuario implements Serializable{
+	
+	public Administrador(String carnet, String nombre, String email, String userName, String password) {
+		super(carnet, nombre, email, userName, password);
+	}
+}

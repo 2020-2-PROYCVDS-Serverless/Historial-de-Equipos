@@ -2,7 +2,10 @@ package edu.eci.cvds.persistence;
 
 import java.util.List;
 import java.util.Date;
-import edu.eci.cvds.samples.entities.Laboratorio;
+
+import edu.eci.cvds.entities.concreteEntities.Laboratorio;
+import edu.eci.cvds.exception.PersistenceException;
+
 /**
 *		------------------------------------------------------------------------
 *		------------------------ PROYECTO CVDS ------------------------------------------

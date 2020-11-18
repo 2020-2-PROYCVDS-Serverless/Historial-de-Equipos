@@ -2,7 +2,9 @@ package edu.eci.cvds.persistence;
 
 import java.util.List;
 import java.util.Date;
-import edu.eci.cvds.samples.actor.Admistrador;
+
+import edu.eci.cvds.entities.actor.Administrador;
+import edu.eci.cvds.exception.PersistenceException;
 /**
 *		------------------------------------------------------------------------
 *		------------------------ PROYECTO CVDS ------------------------------------------
@@ -20,6 +22,6 @@ import edu.eci.cvds.samples.actor.Admistrador;
 */
 public interface AdmistradorDAO {
 
-   public void save(Admistrador e) throws PersistenceException ;
+   public void save(Administrador e) throws PersistenceException ;
 
 }

@@ -2,7 +2,9 @@ package edu.eci.cvds.persistence;
 
 import java.util.List;
 import java.util.Date;
-import edu.eci.cvds.samples.actor.Usuario;
+
+import edu.eci.cvds.entities.actor.Usuario;
+import edu.eci.cvds.exception.PersistenceException;
 /**
 *		------------------------------------------------------------------------
 *		------------------------ PROYECTO CVDS ------------------------------------------
