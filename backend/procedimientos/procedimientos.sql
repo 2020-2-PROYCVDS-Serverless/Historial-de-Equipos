@@ -26,6 +26,7 @@ language plpgsql
 as $body$
 begin
 	insert into equipo (nombre, laboratorioid, registroid) values (nombre, labID, regisID);
+	call registrarNovedad(now, nombre, 'Se registró el equipo'::text);
 end; $body$
 
 
@@ -67,4 +68,63 @@ language plpgsql
 as $body$
 begin 
 	insert into novedad (fecha , computador , detalle ) values (creacion, compID, detail);
+end; $body$
+
+
+
+----- Sprint 2
+
+
+create or replace procedure asociarElemento (elemID int, equipoID varchar)
+language plpgsql
+as $body$
+begin
+	update elementoequipo eleq
+		set eleq.equipoid = equipoID
+		where eleq.id = elemID;
+	call registrarNovedad(now, equipoID, concat('Se asoció el elemento ',elemID::text,' al equipo'));
+end; $body$
+
+
+
+create or replace procedure asociarEquipo (labID varchar(10), equipoID varchar)
+language plpgsql
+as $body$
+begin 
+	update equipo eq
+		set eq.laboratorioid = labID
+		where eq.nombre = equipoID;
+	call registrarNovedad(now, equipoID, concat('Se asoció el equipo al laboratorio ',labID));
+end; $body$
+
+
+create or replace procedure cerrarLaboratorio (labID varchar(10))
+language plpgsql
+as $body$
+begin 
+	update equipo eq
+		set eq.laboratorioid = null
+		where eq.laboratorioid = labID; 
+end; $body$
+
+
+create or replace procedure borrarElemento (elemID int)
+language plpgsql
+as $body$
+begin
+	delete from elementoequipo eleq
+		where eleq.id = elemID and eleq.equipoid = null;
+end; $body$
+
+
+create or replace procedure borrarEquipo (equipoID varchar)
+language plpgsql
+as $body$
+begin 
+	update elementoequipo eleq
+		set eleq.equipoid = null
+		where eleq.equipoid = equipoID;
+	delete from equipo e2 
+		where e2.nombre = equipoID;
+	call registrarNovedad(now, equipoID, 'Se dió de baja al equipo');
 end; $body$
