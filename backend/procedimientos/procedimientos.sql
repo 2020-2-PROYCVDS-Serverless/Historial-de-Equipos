@@ -1,26 +1,3 @@
-create or replace procedure registrarUsuario(ID varchar, nombres varchar, mail varchar, nombreUsuario varchar, passwd varchar)
-language plpgsql
-as $body$
-begin
-	insert into usuario (carnet, nombre, email) values (ID, nombres, mail);
-	insert into credencial (username, pass, usuarioid) values (nombreUsuario, passwd, ID);
-end; $body$
-
-
-create or replace procedure iniciarSesion(nombreUsuario varchar, passwd varchar)
-language plpgsql
-as $body$
-declare 
-	verification int;
-begin 
-	select count(c.username) into verification from credencial c
-		where c.username = nombreUsuario and c.pass = passwd;
-	if verification = 0 then
-		raise exception 'User or password incorrect';
-	end if;
-end; $body$
-
-
 create or replace procedure registrarEquipo(nombre varchar, labID varchar(10), regisID varchar(5))
 language plpgsql
 as $body$
