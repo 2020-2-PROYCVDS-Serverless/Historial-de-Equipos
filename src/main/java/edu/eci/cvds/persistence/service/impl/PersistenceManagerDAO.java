@@ -40,8 +40,7 @@ public class PersistenceManagerDAO implements PersistenceManager {
 		
 	}
 
-	public void registrarNovedad(String identificador, String titulo, String responsable, String detalle)
-			throws PersistenceException {
+	public void registrarNovedad(String identificador, String titulo, String responsable, String detalle) throws PersistenceException {
 		// TODO Auto-generated method stub
 		
 	}
@@ -89,6 +88,21 @@ public class PersistenceManagerDAO implements PersistenceManager {
 	public void inhabilitarElemento(ElementoEquipo elem) throws PersistenceException {
 		// TODO Auto-generated method stub
 		
+	}
+
+	public List<Equipo> reporteEquipos() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public List<ElementoEquipo> reporteElementos() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public List<Laboratorio> reporteLaboratorios() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 	

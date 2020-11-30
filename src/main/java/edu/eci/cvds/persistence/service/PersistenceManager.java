@@ -124,5 +124,26 @@ public interface PersistenceManager {
 	 * @throws PersistenceException si hay error en los datos o si el elemento no se puede inhabilitar.
 	 */
 	void inhabilitarElemento(ElementoEquipo elem) throws PersistenceException;
+	
+	/**
+	 * Realiza el reporte de base de datos de los equipos.
+	 * 
+	 * @return Lista con los equipos que hay registrados.
+	 */
+	List<Equipo> reporteEquipos();
+	
+	/**
+	 * Realiza el reporte en base de datos de los elementos de equipo.
+	 * 
+	 * @return Lista con los elementos de equipo que hay registrados.
+	 */
+	List<ElementoEquipo> reporteElementos();
+	
+	/**
+	 * Realiza el reporte en base de datos de los laboratorios.
+	 * 
+	 * @return Lista con los laboratorios que hay registrados.
+	 */
+	List<Laboratorio> reporteLaboratorios();	
 
 }
