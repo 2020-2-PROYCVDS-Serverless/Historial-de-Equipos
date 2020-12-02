@@ -4,6 +4,7 @@ import edu.eci.cvds.entities.concreteEntities.Equipo;
 import edu.eci.cvds.entities.concreteEntities.Laboratorio;
 import edu.eci.cvds.persistence.dao.LaboratorioDAO;
 import edu.eci.cvds.persistence.dao.mybatis.mappers.LaboratorioMapper;
+import edu.eci.cvds.persistence.service.adapter.entities.LaboratorioAdapter;
 
 import java.util.List;
 
@@ -18,11 +19,11 @@ public class MyBatisLaboratorioDAO implements LaboratorioDAO {
 		labMap.save(lab);
 	}
 
-	public Laboratorio get(String id) {
+	public LaboratorioAdapter get(String id) {
 		return labMap.get(id);
 	}
 
-	public List<Laboratorio> getAll() {
+	public List<LaboratorioAdapter> getAll() {
 		return labMap.getAll();
 	}
 

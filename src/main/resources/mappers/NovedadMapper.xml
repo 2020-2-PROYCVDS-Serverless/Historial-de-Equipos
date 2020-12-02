@@ -3,13 +3,13 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
-<mapper namespace="">
+<mapper namespace="edu.eci.cvds.persistence.dao.mybatis.mappers.NovedadMapper">
 
-<resultMap id="NovedadResult" type="">
+<resultMap id="NovedadResult" type="Novedad">
 </resultMap>
 
 <insert id="registarNovedad" parameterType="map">
-	{call registrarNovedad(#fechaCreacion, #{computadorID}, #{detalle})}
+	
 </insert>
 
 </mapper>

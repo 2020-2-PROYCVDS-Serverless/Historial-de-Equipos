@@ -6,14 +6,15 @@ import org.apache.ibatis.annotations.Param;
 
 import edu.eci.cvds.entities.abstractEntities.ElementoEquipo;
 import edu.eci.cvds.entities.concreteEntities.Equipo;
+import edu.eci.cvds.persistence.service.adapter.entities.EquipoAdapter;
 
 public interface EquipoMapper {
 
 	void save(@Param("equipo") Equipo equipo);
 
-	Equipo get(@Param("equipoID") String id);
+	EquipoAdapter get(@Param("equipoID") String id);
 
-	List<Equipo> getAll();
+	List<EquipoAdapter> getAll();
 
 	void asociar(@Param("equipo") Equipo equipo, 
 			@Param("elem") ElementoEquipo elem);

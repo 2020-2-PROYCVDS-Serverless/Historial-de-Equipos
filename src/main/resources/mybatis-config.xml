@@ -8,7 +8,11 @@
   </properties>
   
   <typeAliases>
-    <!-- falta agregar alias de la capa de aplicacion -->
+    <typeAlias type="edu.eci.cvds.entities.abstractEntities.ElementoEquipo" alias="ElementoEquipo"/>
+    <typeAlias type="edu.eci.cvds.entities.concreteEntities.Equipo" alias="Equipo"/>
+    <typeAlias type="edu.eci.cvds.entities.concreteEntities.Laboratorio" alias="Laboratorio"/>
+    <typeAlias type="edu.eci.cvds.entities.concreteEntities.Novedad" alias="Novedad"/>
+    <!--<typeAlias type="" alias=""/>-->
   </typeAliases>
   
   <enviroments default="development">
@@ -27,13 +31,10 @@
   </enviroments>
   
   <mappers>
-    <mapper resource="mappers/AdministradorMapper.xml" />
     <mapper resource="mappers/ElementoEquipoMapper.xml" />
     <mapper resource="mappers/EquipoMapper.xml" />
     <mapper resource="mappers/LaboratorioMapper.xml" />
     <mapper resource="mappers/NovedadMapper.xml" />
-    <mapper resource="mappers/RegistroMapper.xml" />
-    <mapper resource="mappers/UsuarioMapper.xml" />
   </mappers
   
 </configuration>

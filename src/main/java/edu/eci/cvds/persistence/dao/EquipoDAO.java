@@ -4,6 +4,7 @@ import java.util.List;
 
 import edu.eci.cvds.entities.abstractEntities.ElementoEquipo;
 import edu.eci.cvds.entities.concreteEntities.Equipo;
+import edu.eci.cvds.persistence.service.adapter.entities.EquipoAdapter;
 
 public interface EquipoDAO {
 	
@@ -20,14 +21,14 @@ public interface EquipoDAO {
 	 * @param id identificador del elemento.
 	 * @return objeto de tipo Equipo.
 	 */
-	Equipo get(String id);
+	EquipoAdapter get(String id);
 	
 	/**
 	 * Obtiene todos los objetos de tipo Equipo de la base de datos.
 	 * 
 	 * @return Lista con los elementos obtenidos. Si no hay elementos, retorna una lista vacía.
 	 */
-	List<Equipo> getAll();
+	List<EquipoAdapter> getAll();
 	
 	/**
 	 * Asocia un elemento de equipo a un equipo específico en la base de datos.

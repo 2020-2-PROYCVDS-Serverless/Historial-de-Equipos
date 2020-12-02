@@ -4,6 +4,7 @@ import java.util.List;
 
 import edu.eci.cvds.entities.concreteEntities.Equipo;
 import edu.eci.cvds.entities.concreteEntities.Laboratorio;
+import edu.eci.cvds.persistence.service.adapter.entities.LaboratorioAdapter;
 
 public interface LaboratorioDAO {
 
@@ -20,14 +21,14 @@ public interface LaboratorioDAO {
 	 * @param id identificador del elemento.
 	 * @return objeto de tipo Laboratorio.
 	 */
-	Laboratorio get(String id);
+	LaboratorioAdapter get(String id);
 	
 	/**
 	 * Obtiene todos los objetos de tipo Laboratorio de la base de datos.
 	 * 
 	 * @return Lista con los elementos obtenidos. Si no hay elementos, retorna una lista vacía.
 	 */
-	List<Laboratorio> getAll();
+	List<LaboratorioAdapter> getAll();
 	
 	/**
 	 * Asocia un qeuipo a un laboratorio específico en la base de datos.

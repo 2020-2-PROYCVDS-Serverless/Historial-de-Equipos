@@ -4,6 +4,7 @@ import edu.eci.cvds.entities.abstractEntities.ElementoEquipo;
 import edu.eci.cvds.entities.concreteEntities.Equipo;
 import edu.eci.cvds.persistence.dao.EquipoDAO;
 import edu.eci.cvds.persistence.dao.mybatis.mappers.EquipoMapper;
+import edu.eci.cvds.persistence.service.adapter.entities.EquipoAdapter;
 
 import java.util.List;
 
@@ -19,11 +20,11 @@ public class MyBatisEquipoDAO implements EquipoDAO {
 		
 	}
 
-	public Equipo get(String id) {
+	public EquipoAdapter get(String id) {
 		return equipoMap.get(id);
 	}
 
-	public List<Equipo> getAll() {
+	public List<EquipoAdapter> getAll() {
 		return equipoMap.getAll();
 	}
 

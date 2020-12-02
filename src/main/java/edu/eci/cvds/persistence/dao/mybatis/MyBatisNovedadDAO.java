@@ -1,8 +1,8 @@
 package edu.eci.cvds.persistence.dao.mybatis;
 
-import edu.eci.cvds.entities.concreteEntities.Novedad;
 import edu.eci.cvds.persistence.dao.NovedadDAO;
 import edu.eci.cvds.persistence.dao.mybatis.mappers.NovedadMapper;
+import edu.eci.cvds.persistence.service.adapter.entities.NovedadAdapter;
 
 import java.util.List;
 
@@ -17,11 +17,11 @@ public class MyBatisNovedadDAO implements NovedadDAO {
 		novedadMap.save(identificador, titulo, responsable, detalle);
 	}
 
-	public List<Novedad> get(String id) {
+	public List<NovedadAdapter> get(String id) {
 		return novedadMap.get(id);
 	}
 
-	public List<Novedad> getAll() {
+	public List<NovedadAdapter> getAll() {
 		return novedadMap.getAll();
 	}
 	

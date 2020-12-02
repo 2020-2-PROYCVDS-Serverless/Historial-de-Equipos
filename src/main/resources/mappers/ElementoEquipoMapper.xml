@@ -3,13 +3,13 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
-<mapper namespace="">
+<mapper namespace="edu.eci.cvds.persistence.dao.mybatis.mappers.ElementoEquipoMapper">
 
-<resultMap id="ElementoEquipoResult" type="">
+<resultMap id="ElementoEquipoResult" type="ElementoEquipo">
 </resultMap>
 
-<insert id="registrarElementoEquipo" parameterType="map">
-	{call registrarElemento(#{descripcion}, #{condicion}, #{regisID}, #{equipoID})}
+<insert id="save" parameterType="map">
+	
 </insert>
 
 

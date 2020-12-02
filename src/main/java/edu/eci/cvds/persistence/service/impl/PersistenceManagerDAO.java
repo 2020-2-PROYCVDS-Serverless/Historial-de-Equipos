@@ -1,6 +1,10 @@
 package edu.eci.cvds.persistence.service.impl;
 
 import edu.eci.cvds.persistence.service.PersistenceManager;
+import edu.eci.cvds.persistence.service.adapter.Adapter;
+import edu.eci.cvds.persistence.service.adapter.entities.ElementoEquipoAdapter;
+import edu.eci.cvds.persistence.service.adapter.entities.EquipoAdapter;
+import edu.eci.cvds.persistence.service.adapter.entities.LaboratorioAdapter;
 import edu.eci.cvds.entities.abstractEntities.ElementoEquipo;
 import edu.eci.cvds.entities.concreteEntities.Equipo;
 import edu.eci.cvds.entities.concreteEntities.Laboratorio;
@@ -108,15 +112,27 @@ public class PersistenceManagerDAO implements PersistenceManager {
 	}
 
 	public List<Equipo> reporteEquipos() {
-		return equipoDAO.getAll();
+		List<Equipo> equipos = new ArrayList<Equipo>();
+		for (EquipoAdapter eqAd: equipoDAO.getAll()) {
+			equipos.add(Adapter.convert(eqAd));
+		}
+		return equipos;
 	}
 
 	public List<ElementoEquipo> reporteElementos() {
-		return elemDAO.getAll();
+		List<ElementoEquipo> elems = new ArrayList<ElementoEquipo>();
+		for (ElementoEquipoAdapter elemAd: elemDAO.getAll()) {
+			elems.add(Adapter.convert(elemAd));
+		}
+		return elems;
 	}
 
 	public List<Laboratorio> reporteLaboratorios() {
-		return labDAO.getAll();
+		List<Laboratorio> labs = new ArrayList<Laboratorio>();
+		for (LaboratorioAdapter labAd: labDAO.getAll()) {
+			labs.add(Adapter.convert(labAd));
+		}
+		return labs;
 	}
 	
 	

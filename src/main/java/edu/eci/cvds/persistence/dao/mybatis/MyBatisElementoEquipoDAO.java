@@ -3,6 +3,7 @@ package edu.eci.cvds.persistence.dao.mybatis;
 import edu.eci.cvds.entities.abstractEntities.ElementoEquipo;
 import edu.eci.cvds.persistence.dao.ElementoEquipoDAO;
 import edu.eci.cvds.persistence.dao.mybatis.mappers.ElementoEquipoMapper;
+import edu.eci.cvds.persistence.service.adapter.entities.ElementoEquipoAdapter;
 
 import java.util.List;
 
@@ -17,11 +18,11 @@ public class MyBatisElementoEquipoDAO implements ElementoEquipoDAO {
 		elementoMap.save(elem);
 	}
 
-	public ElementoEquipo get(String id) {
+	public ElementoEquipoAdapter get(String id) {
 		return elementoMap.get(id);
 	}
 
-	public List<ElementoEquipo> getAll() {
+	public List<ElementoEquipoAdapter> getAll() {
 		return elementoMap.getAll();
 	}
 

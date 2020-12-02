@@ -2,7 +2,7 @@ package edu.eci.cvds.persistence.dao;
 
 import java.util.List;
 
-import edu.eci.cvds.entities.concreteEntities.Novedad;
+import edu.eci.cvds.persistence.service.adapter.entities.NovedadAdapter;
 
 public interface NovedadDAO {
 
@@ -22,13 +22,13 @@ public interface NovedadDAO {
 	 * @param id identificador del elemento.
 	 * @return Lista con todas las novedades de ese elemento.
 	 */
-	List<Novedad> get(String id);
+	List<NovedadAdapter> get(String id);
 	
 	/**
 	 * Retorna el historial de todas las novedades registradas en la base de datos.
 	 * 
 	 * @return Lista con todas las novedades.
 	 */
-	List<Novedad> getAll();
+	List<NovedadAdapter> getAll();
 	
 }
