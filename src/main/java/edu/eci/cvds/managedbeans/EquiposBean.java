@@ -6,7 +6,7 @@ import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 
-import com.jsf.crud.db.operations.DatabaseOperation;
+import edu.eci.cvds.ConeccionEquipo;
 
 @ManagedBean @RequestScoped
 public class EquiposBean {
@@ -38,7 +38,7 @@ public class EquiposBean {
 	/* Method Will Avoid Multiple Calls To DB For Fetching The equipos Records. If This Is Not Used & Data Is Fetched From Getter Method, JSF DataTable Will Make Multiple Calls To DB*/
 	@PostConstruct
 	public void init() {
-		equiposListFromDB = DatabaseOperation.getEquiposListFromDB();
+		equiposListFromDB = ConeccionEquipo.getEquiposListFromDB();
 	}
 
 	/* Method Used To Fetch All Records From The Database */
@@ -48,18 +48,18 @@ public class EquiposBean {
 	
 	
 	public String saveEquipoDetails(EquiposBean newEquipoObj) {
-		return DatabaseOperation.saveEquipoDetailsInDB(newEquipoObj);
+		return ConeccionEquipo.saveEquipoDetailsInDB(newEquipoObj);
 	}
 	
 	public String editEquipoRecord(String EquipoId) {
-		return DatabaseOperation.editEquipoRecordInDB(EquipoId);
+		return ConeccionEquipo.editEquipoRecordInDB(EquipoId);
 	}
 	
 	public String updateEquipoDetails(EquiposBean updateEquipoObj) {
-		return DatabaseOperation.updateEquipoDetailsInDB(updateEquipoObj);
+		return ConeccionEquipo.updateEquipoDetailsInDB(updateEquipoObj);
 	}
 	
 	public String deleteEquipoRecord(String EquipoId) {
-		return DatabaseOperation.deleteEquipoRecordInDB(EquipoId);
+		return ConeccionEquipo.deleteEquipoRecordInDB(EquipoId);
 	}
 }
