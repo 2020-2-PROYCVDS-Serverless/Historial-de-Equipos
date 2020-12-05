@@ -1,7 +1,7 @@
 # Historial-de-Equipos CVDS  2020-2
 
 
-####    Nombre -------------->                Rol
+####    Nombre ------------------------------>Rol
 ####    OSCAR DAVID OSPINA RODRIGUEZ -------->Product Owner
 ####    BUITRAGO MURILLO BRAYAN SANTIAGO ---->Team Developer
 ####    MARIN NARANJO NICKOLAS FELIPE   ----->Team Developer
@@ -30,7 +30,15 @@ Se usó, JSF, JDB, Primefaces Postgress
 
 ## Descripción del proceso:
 ### Integrantes.
+####    Nombre ------------------------------>Rol
+####    OSCAR DAVID OSPINA RODRIGUEZ -------->Product Owner
+####    BUITRAGO MURILLO BRAYAN SANTIAGO ---->Team Developer
+####    MARIN NARANJO NICKOLAS FELIPE   ----->Team Developer
+####    EDUARD GIOVANNY ARIAS RINCON   ------>Team Developer
+####    CUBILLOS HURTADO ANDRÉS FELIPE  ----->Team Developer
 ### Breve descripción de la Metodología.
+Nos dividimos por roles, o por partes, backend, frontend, aplicacion y pruebas,
+y usamos daily meeting para compartir los avances.
 
 ### Backlog
 - [Taiga](https://tree.taiga.io/project/mysticunios1998-historial-de-equipos-labinfo/backlog)
