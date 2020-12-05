@@ -1,12 +1,12 @@
 # Historial-de-Equipos CVDS  2020-2
 
 
-### Nombre                                Rol
-    OSCAR DAVID OSPINA RODRIGUEZ -------->Product Owner
-    BUITRAGO MURILLO BRAYAN SANTIAGO ---->Team Developer
-    MARIN NARANJO NICKOLAS FELIPE   ----->Team Developer
-    EDUARD GIOVANNY ARIAS RINCON   ------>Team Developer
-    CUBILLOS HURTADO ANDRÉS FELIPE  ----->Team Developer
+####    Nombre                                Rol
+####    OSCAR DAVID OSPINA RODRIGUEZ -------->Product Owner
+####    BUITRAGO MURILLO BRAYAN SANTIAGO ---->Team Developer
+####    MARIN NARANJO NICKOLAS FELIPE   ----->Team Developer
+####    EDUARD GIOVANNY ARIAS RINCON   ------>Team Developer
+####    CUBILLOS HURTADO ANDRÉS FELIPE  ----->Team Developer
     
 
 ### Descripción del producto.
