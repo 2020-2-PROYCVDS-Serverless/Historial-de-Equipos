@@ -33,14 +33,8 @@ Guice, QuickTheories, PostgreSQL).
 ### Breve descripción de la Metodología.
 
 ### Enlace a Taiga (hacer público el Backlog).
-### Generar el 'release-burndown chart' del proyecto, e indicar los puntos de historia
-realizados y los faltantes.
-○ Para cada Sprint:
+### Generar el 'release-burndown chart' del proyecto,
+
 ### Imagen del 'sprint-backlog'
-### Imagen del 'sprint-burndown chart' (sacado del sprint-backlog anterior), y una
-descripción breve de los problemas encontrados y mejoras realizadas al proceso.
-○ Reporte de pruebas y de cubrimiento de las mismas (sólo la foto del reporte principal).
-Para la cobertura, pueden usar los plugins disponibles (EclEmma, Jacoco, etc.)
-○ Reporte de análisis estático de código. Se pueden usar las mismas herramientas trabajadas
-en los laboratorios.
+### Imagen del 'sprint-burndown chart
 
