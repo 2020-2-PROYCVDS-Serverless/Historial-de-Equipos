@@ -42,13 +42,12 @@ y usamos daily meeting para compartir los avances.
 
 ### Backlog
 - [Taiga](https://tree.taiga.io/project/mysticunios1998-historial-de-equipos-labinfo/backlog)
-
-### Release-burndown chart
+![](https://github.com/2020-2-PROYCVDS-Serverless/Historial-de-Equipos/blob/main/images/backlog.PNG)
 
 
 ### Sprint 1
 ![](https://github.com/DonSantiagoS/LAB2CVDS/blob/master/Imagenes/Logo.png)
-![](https://github.com/DonSantiagoS/LAB2CVDS/blob/master/Imagenes/Logo.png)
+
 ### Sprint 2
 ![](https://github.com/DonSantiagoS/LAB2CVDS/blob/master/Imagenes/Logo.png)
 ![](https://github.com/DonSantiagoS/LAB2CVDS/blob/master/Imagenes/Logo.png)
