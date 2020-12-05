@@ -46,6 +46,14 @@ y usamos daily meeting para compartir los avances.
 ### Release-burndown chart
 
 
-### Imagen del 'sprint-backlog'
-### Imagen del 'sprint-burndown chart
+### Sprint 1
+![](https://github.com/DonSantiagoS/LAB2CVDS/blob/master/Imagenes/Logo.png)
+![](https://github.com/DonSantiagoS/LAB2CVDS/blob/master/Imagenes/Logo.png)
+### Sprint 2
+![](https://github.com/DonSantiagoS/LAB2CVDS/blob/master/Imagenes/Logo.png)
+![](https://github.com/DonSantiagoS/LAB2CVDS/blob/master/Imagenes/Logo.png)
+### Sprint 3
+![](https://github.com/DonSantiagoS/LAB2CVDS/blob/master/Imagenes/Logo.png)
+![](https://github.com/DonSantiagoS/LAB2CVDS/blob/master/Imagenes/Logo.png)
+
 
