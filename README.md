@@ -17,9 +17,9 @@ Esta aplicacion junta los conocimientos adquiridos en la asignatura Ciclos de Vi
 ## Arquitectura y Diseño detallado:
 ### Modelo E-R.
 
-### Diagrama de clases (hacerlo mediante ingeniería inversa)
+### Diagrama de clases 
 
-### Descripción de la arquitectura (capas) y del Stack de tecnologías utilizado 
+### Stack de tecnologías utilizado 
 Se usó, JSF, JDB, Primefaces Postgress
 
 ## App
