@@ -5,12 +5,42 @@
   
 <mapper namespace="edu.eci.cvds.persistence.dao.mybatis.mappers.LaboratorioMapper">
 
-<resultMap id="LaboratorioResult" type="Laboratorio">
+<resultMap id="LaboratorioResult" type="LaboratorioAdapter">
+	<id property="id" column="id"/>
+	<result property="disponible" column="disponible"/>
+	<result property="creacion" column="creacion"/>
+	<result property="cierre" column="cierre"/>
 </resultMap>
 
 
-<insert id="crearLaboratorio" parameterType="map">
-	
+<insert id="save" parameterType="map" statementType="CALLABLE">
+	{call crearLaboratorio(
+		#{lab.id}
+	)}
 </insert>
+
+<select id="get" resultMap="LaboratorioResult" parameterType="map">
+	select l.id as "id", l.disponible as "disponible", l.creacion as "creacion", l.cierre as "cierre"
+	from Laboratorio l 
+	where l.id = #{labID};
+</select>
+
+<select id="getAll" resultMap="LaboratorioResult" parameterType="map">
+	select l.id as "id", l.disponible as "disponible", l.creacion as "creacion", l.cierre as "cierre"
+	from Laboratorio l;
+</select>
+
+<update id="asociar" parameterType="map" statementType="CALLABLE">
+	{call asociarEquipo(
+		#{lab.id},
+		#{equipo.id}
+	)}
+</update>
+
+<update id="cerrar" parameterType="map" statementType="CALLABLE">
+	{call cerrarLaboratorio(
+		#{labid}
+	)}
+</update>
 
 </mapper>

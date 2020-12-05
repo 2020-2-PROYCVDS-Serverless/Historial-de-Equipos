@@ -18,17 +18,21 @@ import com.google.inject.Inject;
 
 public class PersistenceManagerDAO implements PersistenceManager {
 	
-	@Inject
 	private ElementoEquipoDAO elemDAO;
 	
-	@Inject
 	private EquipoDAO equipoDAO;
-	
-	@Inject 
+	 
 	private LaboratorioDAO labDAO;
-	
-	@Inject 
+	 
 	private NovedadDAO novDAO;
+
+	@Inject
+	public PersistenceManagerDAO(ElementoEquipoDAO elemDAO, EquipoDAO equipoDAO, LaboratorioDAO labDAO, NovedadDAO novDAO) {
+		this.elemDAO = elemDAO;
+		this.equipoDAO = equipoDAO;
+		this.labDAO = labDAO;
+		this.novDAO = novDAO;
+	}
 
 	public void registrarEquipo(Equipo equipo) throws PersistenceException {
 		equipoDAO.save(equipo);
@@ -48,7 +52,6 @@ public class PersistenceManagerDAO implements PersistenceManager {
 
 	public void registrarElemento(ElementoEquipo elem) throws PersistenceException {
 		elemDAO.save(elem);
-		
 	}
 
 	public void registrarNovedad(String identificador, String titulo, String responsable, String detalle) throws PersistenceException {

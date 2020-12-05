@@ -26,7 +26,7 @@ begin
 end; $body$
 
 
-create or replace procedure crearLaboratorio(labID varchar(10))
+create or replace procedure crearLaboratorio(labID varchar)
 language plpgsql
 as $body$
 begin 
@@ -122,7 +122,7 @@ begin
 end; $body$
 
 
-create or replace procedure inhabilitarElemento (elemID int)
+create or replace procedure inhabilitarElemento (elemID varchar)
 language plpgsql
 as $body$
 declare

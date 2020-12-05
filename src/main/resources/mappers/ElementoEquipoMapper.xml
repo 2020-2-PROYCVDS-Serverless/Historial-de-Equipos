@@ -5,12 +5,46 @@
   
 <mapper namespace="edu.eci.cvds.persistence.dao.mybatis.mappers.ElementoEquipoMapper">
 
-<resultMap id="ElementoEquipoResult" type="ElementoEquipo">
+<resultMap id="ElementoEquipoResult" type="ElementoEquipoAdapter">
+	<id property="id" column="id"/>
+	<result property="descripcion" column="descripcion"/>
+	<result property="disponible" column="disponible"/>
+	<result property="condicion" column="condicion"/>
+	<result property="nombre" column="nombre"/>
+	<result property="tipo" column="tipo"/>
 </resultMap>
 
-<insert id="save" parameterType="map">
-	
+<insert id="save" parameterType="map" statementType="CALLABLE">
+	{call registrarElemento(
+		#{elem.id},
+		#{elem.descripcion},
+		#{elem.condicion},
+		#{elem.nombre},
+		#{elem.tipo}
+	)}
 </insert>
+
+
+<select id="get" resultMap="ElementoEquipoResult" parameterType="map">
+	select r.id as "id", r.descripcion as "descripcion", r.disponible as "disponible", r.condicion as "condicion", r.nombre as "nombre", elem.tipo as "tipo"
+	from Registrable r join ElementoEquipo elem 
+		on r.id = elem.id
+	where elem.id = #{elemID};
+</select>
+
+
+<select id="getAll" resultMap="ElementoEquipoResult" parameterType="map">
+	select r.id as "id", r.descripcion as "descripcion", r.disponible as "disponible", r.condicion as "condicion", r.nombre as "nombre", elem.tipo as "tipo"
+	from Registrable r join ElementoEquipo elem 
+		on r.id = elem.id;
+</select>
+
+
+<update id="inhabilitar" parameterType="map" statementType="CALLABLE">
+	{call inhabilitarElemento(
+		#{elem.id}
+	)}
+</update>
 
 
 </mapper>

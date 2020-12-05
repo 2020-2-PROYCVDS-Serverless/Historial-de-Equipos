@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE configuration
   PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
@@ -12,11 +12,15 @@
     <typeAlias type="edu.eci.cvds.entities.concreteEntities.Equipo" alias="Equipo"/>
     <typeAlias type="edu.eci.cvds.entities.concreteEntities.Laboratorio" alias="Laboratorio"/>
     <typeAlias type="edu.eci.cvds.entities.concreteEntities.Novedad" alias="Novedad"/>
+    <typeAlias type="edu.eci.cvds.persistence.service.adapter.entities.ElementoEquipoAdapter" alias="ElementoEquipoAdapter"/>
+    <typeAlias type="edu.eci.cvds.persistence.service.adapter.entities.EquipoAdapter" alias="EquipoAdapter"/>
+    <typeAlias type="edu.eci.cvds.persistence.service.adapter.entities.LaboratorioAdapter" alias="LaboratorioAdapter"/>
+    <typeAlias type="edu.eci.cvds.persistence.service.adapter.entities.NovedadAdapter" alias="NovedadAdapter"/>
     <!--<typeAlias type="" alias=""/>-->
   </typeAliases>
   
-  <enviroments default="development">
-    <enviroment id="development">
+  <environments default="development">
+    <environment id="development">
       <transactionManager type="JDBC" />
       <dataSource type="POOLED">
         <property name="driver" value="${driver}" />
@@ -24,17 +28,15 @@
         <property name="username" value="${username}" />
         <property name="password" value="${password}" />
       </dataSource>
-    </enviroment>
+    </environment>
     
-    <enviroment id="test">
-    </enviroment> 
-  </enviroments>
+  </environments>
   
   <mappers>
     <mapper resource="mappers/ElementoEquipoMapper.xml" />
     <mapper resource="mappers/EquipoMapper.xml" />
     <mapper resource="mappers/LaboratorioMapper.xml" />
     <mapper resource="mappers/NovedadMapper.xml" />
-  </mappers
+  </mappers>
   
 </configuration>

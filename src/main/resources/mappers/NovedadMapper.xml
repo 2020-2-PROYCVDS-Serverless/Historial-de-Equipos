@@ -5,11 +5,32 @@
   
 <mapper namespace="edu.eci.cvds.persistence.dao.mybatis.mappers.NovedadMapper">
 
-<resultMap id="NovedadResult" type="Novedad">
+<resultMap id="NovedadResult" type="NovedadAdapter">
+	<id property="registrable" column="registrable"/>
+	<result property="fechaHora" column="fechaHora"/>
+	<result property="titulo" column="titulo"/>
+	<result property="responsable" column="responsable"/>
+	<result property="detalle" column="detalle"/>
 </resultMap>
 
-<insert id="registarNovedad" parameterType="map">
-	
+<insert id="save" parameterType="map" statementType="CALLABLE">
+	{call registrarNovedad(
+		#{elementoID},
+		#{titulo},
+		#{responsable},
+		#{detalle},
+	)}
 </insert>
+
+<select id="get" parameterType="map" resultMap="NovedadResult">
+	select n.registrableid as "registrable", n.fechahora as "fechaHora", n.titulo as "titulo", n.responsable as "responsable", n.detalle as "detalle"
+	from Novedad n
+	where n.registrableid = #{elementoID};
+</select>
+
+<select id="getAll" parameterType="map" resultMap="NovedadResult">
+	select n.registrableid as "registrable", n.fechahora as "fechaHora", n.titulo as "titulo", n.responsable as "responsable", n.detalle as "detalle"
+	from Novedad n;
+</select>
 
 </mapper>

@@ -5,12 +5,46 @@
   
 <mapper namespace="edu.eci.cvds.persistence.dao.mybatis.mappers.EquipoMapper">
 
-<resultMap id="EquipoResult" type="Equipo">
+<resultMap id="EquipoResult" type="EquipoAdapter">
+	<id property="id" column="id"/>
+	<result property="descripcion" column="descripcion"/>
+	<result property="disponible" column="disponible"/>
+	<result property="condicion" column="condicion"/>
+	<result property="nombre" column="nombre"/>
 </resultMap>
 
 
-<insert id="registrarEquipo" parameterType="map">
-	
+<insert id="save" parameterType="map" statementType="CALLABLE">
+	{call registrarEquipo(
+		#{equipo.id},
+		#{equipo.descripcion},
+		#{equipo.condicion},
+		#{equipo.nombre}
+	)}
 </insert>
+
+<select id="get" resultMap="EquipoResult" parameterType="map">
+	select r.id as "id", r.descripcion as "descripcion", r.disponible as "disponible", r.condicion as "condicion", r.nombre as "nombre"
+	from Registrable r 
+	where r.id = #{equipoID};
+</select>
+
+<select id="getAll" resultMap="EquipoResult" parameterType="map">
+	select r.id as "id", r.descripcion as "descripcion", r.disponible as "disponible", r.condicion as "condicion", r.nombre as "nombre"
+	from Registrable r 
+</select>
+
+<update id="asociar" parameterType="map" statementType="CALLABLE">
+	{call asociarElemento(
+		#{elem.id},
+		#{equipo.id}
+	)}
+</update>
+
+<update id="inhabilitar" parameterType="map" statementType="CALLABLE">
+	{call inhabilitarEquipo(
+		#{equipo.id}
+	)}
+</update>
 
 </mapper>

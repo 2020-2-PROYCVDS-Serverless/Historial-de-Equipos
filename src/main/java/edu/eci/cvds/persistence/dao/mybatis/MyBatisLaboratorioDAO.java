@@ -5,6 +5,7 @@ import edu.eci.cvds.entities.concreteEntities.Laboratorio;
 import edu.eci.cvds.persistence.dao.LaboratorioDAO;
 import edu.eci.cvds.persistence.dao.mybatis.mappers.LaboratorioMapper;
 import edu.eci.cvds.persistence.service.adapter.entities.LaboratorioAdapter;
+import edu.eci.cvds.utils.connection.SqlConnection;
 
 import java.util.List;
 
@@ -12,8 +13,11 @@ import com.google.inject.Inject;
 
 public class MyBatisLaboratorioDAO implements LaboratorioDAO {
 
-	@Inject
 	private LaboratorioMapper labMap;
+	
+	public MyBatisLaboratorioDAO() {
+		labMap = SqlConnection.getMapper(LaboratorioMapper.class);
+	}
 
 	public void save(Laboratorio lab) {
 		labMap.save(lab);
