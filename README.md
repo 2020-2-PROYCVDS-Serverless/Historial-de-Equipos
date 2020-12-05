@@ -30,7 +30,7 @@ Se usó, JSF, JDB, Primefaces Postgress
 
 ## Descripción del proceso:
 ### Integrantes.
-####    Nombre ------------------------------>Rol
+####    Nombre --------------------------------->Rol
 ####    OSCAR DAVID OSPINA RODRIGUEZ -------->Product Owner
 ####    BUITRAGO MURILLO BRAYAN SANTIAGO ---->Team Developer
 ####    MARIN NARANJO NICKOLAS FELIPE   ----->Team Developer
@@ -43,7 +43,8 @@ y usamos daily meeting para compartir los avances.
 ### Backlog
 - [Taiga](https://tree.taiga.io/project/mysticunios1998-historial-de-equipos-labinfo/backlog)
 
-### Generar el 'release-burndown chart' del proyecto
+### Release-burndown chart
+
 
 ### Imagen del 'sprint-backlog'
 ### Imagen del 'sprint-burndown chart
