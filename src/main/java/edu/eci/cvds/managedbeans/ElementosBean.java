@@ -6,7 +6,7 @@ import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 
-import com.jsf.crud.db.operations.DatabaseOperation;
+import edu.eci.cvds.ConeccionElemento;
 
 @ManagedBean @RequestScoped
 public class ElementosBean {
@@ -39,7 +39,7 @@ public class ElementosBean {
 	/* Method Will Avoid Multiple Calls To DB For Fetching The elementos Records. If This Is Not Used & Data Is Fetched From Getter Method, JSF DataTable Will Make Multiple Calls To DB*/
 	@PostConstruct
 	public void init() {
-		elementosListFromDB = DatabaseOperation.getElementossListFromDB();
+		elementosListFromDB = ConeccionElemento.getElementossListFromDB();
 	}
 
 	/* Method Used To Fetch All Records From The Database */
@@ -48,19 +48,19 @@ public class ElementosBean {
 	}
 	
 	public String saveElementoDetails(ElementosBean newElementoObj) {
-		return DatabaseOperation.saveElementoDetailsInDB(newElementoObj);
+		return ConeccionElemento.saveElementoDetailsInDB(newElementoObj);
 	}
 	
 
 	public String editElementoRecord(String ElementoId) {
-		return DatabaseOperation.editElementoRecordInDB(ElementoId);
+		return ConeccionElemento.editElementoRecordInDB(ElementoId);
 	}
 
 	public String updateElementoDetails(ElementosBean updateElementoObj) {
-		return DatabaseOperation.updateElementoDetailsInDB(updateElementoObj);
+		return ConeccionElemento.updateElementoDetailsInDB(updateElementoObj);
 	}
 	
 	public String deleteElementoRecord(String ElementoId) {
-		return DatabaseOperation.deleteElementoRecordInDB(ElementoId);
+		return ConeccionElemento.deleteElementoRecordInDB(ElementoId);
 	}
 }
