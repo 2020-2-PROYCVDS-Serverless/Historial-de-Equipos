@@ -1,7 +1,6 @@
-# Historial-de-Equipos
+# Historial-de-Equipos CVDS  2020-2
 
-## 2020-2
-### CVDS 
+
 ### Nombre                                Rol
     OSCAR DAVID OSPINA RODRIGUEZ -------->Product Owner
     BUITRAGO MURILLO BRAYAN SANTIAGO ---->Team Developer
@@ -20,20 +19,23 @@ Esta aplicacion junta los conocimientos adquiridos en la asignatura Ciclos de Vi
 
 ### Diagrama de clases (hacerlo mediante ingeniería inversa)
 
-### Descripción de la arquitectura (capas) y del Stack de tecnologías utilizado (PrimeFaces,
-Guice, QuickTheories, PostgreSQL).
+### Descripción de la arquitectura (capas) y del Stack de tecnologías utilizado 
+Se usó, JSF, JDB, Primefaces Postgress
 
 ## App
 - [Heroku App](https://historial-equipos.herokuapp.com/)
 
 ### Enlace al sistema de integración continua.
 
+
 ## Descripción del proceso:
 ### Integrantes.
 ### Breve descripción de la Metodología.
 
-### Enlace a Taiga (hacer público el Backlog).
-### Generar el 'release-burndown chart' del proyecto,
+### Backlog
+- [Taiga](https://tree.taiga.io/project/mysticunios1998-historial-de-equipos-labinfo/backlog)
+
+### Generar el 'release-burndown chart' del proyecto
 
 ### Imagen del 'sprint-backlog'
 ### Imagen del 'sprint-burndown chart
