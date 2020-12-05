@@ -46,13 +46,12 @@ y usamos daily meeting para compartir los avances.
 
 
 ### Sprint 1
-![](https://github.com/DonSantiagoS/LAB2CVDS/blob/master/Imagenes/Logo.png)
+![](https://github.com/2020-2-PROYCVDS-Serverless/Historial-de-Equipos/blob/main/images/sp1.PNG)
 
 ### Sprint 2
-![](https://github.com/DonSantiagoS/LAB2CVDS/blob/master/Imagenes/Logo.png)
-![](https://github.com/DonSantiagoS/LAB2CVDS/blob/master/Imagenes/Logo.png)
+![](https://github.com/2020-2-PROYCVDS-Serverless/Historial-de-Equipos/blob/main/images/sp2.PNG)
+
 ### Sprint 3
-![](https://github.com/DonSantiagoS/LAB2CVDS/blob/master/Imagenes/Logo.png)
-![](https://github.com/DonSantiagoS/LAB2CVDS/blob/master/Imagenes/Logo.png)
+![](https://github.com/2020-2-PROYCVDS-Serverless/Historial-de-Equipos/blob/main/images/sp3.PNG)
 
 
