@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:h="http://java.sun.com/jsf/html" 
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1" http-equiv="X-UA-Conpatible" />
+    <h:outputStylesheet library="css" name="css.css" />
+    <title>Elemento</title>
+    <style type="text/css">
+        .btnWidth {
+            width: 80px;
+        }     
+    </style>
+</h:head>
+<h:body>
+    <h:form id="createEquipoForm" class="form-horizontal">
+        <div class="form-group">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                <h2>Agregar Elemento</h2>
+            </div>
+        </div>
+        <hr/>
+        <div class="form-group">
+            <h:outputLabel for="id" class="control-label col-sm-4">id:</h:outputLabel>
+            <div class="col-sm-4">
+                <h:inputText id="id-id" value="#{ElementosBean.id}" class="form-control" validatorMessage="id  is required">
+                    <f:validateRequired />
+                </h:inputText>
+            </div>
+        </div>
+        <div class="form-group">
+            <h:outputLabel for="EquipoID" class="control-label col-sm-4">EquipoID:</h:outputLabel>
+            <div class="col-sm-4">
+                <h:inputText id="EquipoID-id" value="#{ElementosBean.equipoID}" class="form-control" validatorMessage="EquipoID is required">
+                    <f:validateRequired/>
+                </h:inputText>
+            </div>
+        </div>
+		 <div class="form-group">
+            <h:outputLabel for="TipoID" class="control-label col-sm-4">Tipo:</h:outputLabel>
+            <div class="col-sm-4">
+                <h:inputText id="tipo-id" value="#{ElementosBean.email}" class="form-control" validatorMessage="tipo is required">
+                    <f:validateRequired/>
+                </h:inputText>
+            </div>
+        </div>
+    </h:form>
+</h:body>
+</html>
